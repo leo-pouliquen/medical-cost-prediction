@@ -1,0 +1,13 @@
+# Modèles sérialisés
+models/*.pkl
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Environnement
+.env
+*.egg-info/
+dist/
+build/
