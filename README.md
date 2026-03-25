@@ -28,29 +28,27 @@ Le modèle retenu est XGBoost Optimisé — il explique 91.5% de la variance des
 ## 📁 Architecture du projet
 ```
 medical_cost_prediction/
-├── config.py                    ← Chemins et constantes du projet
-├── requirements.txt             ← Dépendances Python
+├── config.py                    # Chemins et constantes du projet
+├── requirements.txt             # Dépendances Python
+├── main_notebook.ipynb          # Notebook principal (EDA + modélisation)
 │
 ├── data/
-│   └── medicalcost.csv          ← Dataset (1 337 assurés, 7 variables)
-│
-├── notebooks/
-│   └── main_notebook.ipynb      ← Notebook principal (EDA + modélisation)
+│   └── medicalcost.csv          # Dataset (1 337 assurés, 7 variables)
 │
 ├── src/
-│   ├── data_loader.py           ← Chargement et validation des données
-│   ├── data_quality.py          ← Contrôles qualité (missing, outliers, doublons)
-│   ├── data_preprocessing.py    ← Encodage, split, pipeline sklearn
-│   ├── features_engineering.py  ← Création de variables actuarielles
-│   ├── eda.py                   ← Visualisations et tests statistiques
-│   ├── models.py                ← Entraînement et optimisation des modèles
-│   ├── evaluation.py            ← Métriques et tableau comparatif
-│   └── interpretability.py      ← Analyse SHAP
+│   ├── data_loader.py           # Chargement et validation des données
+│   ├── data_quality.py          # Contrôles qualité (missing, outliers, doublons)
+│   ├── data_preprocessing.py    # Encodage, split, pipeline sklearn
+│   ├── features_engineering.py  # Création de variables actuarielles
+│   ├── eda.py                   # Visualisations et tests statistiques
+│   ├── models.py                # Entraînement et optimisation des modèles
+│   ├── evaluation.py            # Métriques et tableau comparatif
+│   └── interpretability.py      # Analyse SHAP
 │
-├── output/                      ← Graphiques exportés
+├── output/                      # Graphiques exportés
 │
 └── models/
-    └── xgboost_optimized.pkl    ← Meilleur modèle sérialisé
+    └── xgboost_optimized.pkl    # Meilleur modèle sérialisé
 ```
 
 ## Enseignements clés
