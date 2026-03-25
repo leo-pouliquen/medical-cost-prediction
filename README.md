@@ -20,8 +20,8 @@ L'interprétabilité SHAP permet de valider la cohérence des prédictions et d'
 
 ## Interprétabilité
 
-![SHAP Summary Plot](output/features_importance.png)
-![Waterfall Plot](output/waterfall_plot.png)
+<img src="output/features_importance.png" width="700"/>
+<img src="output/waterfall_plot.png" width="700"/>
 
 Le modèle retenu est XGBoost Optimisé — il explique 91.5% de la variance des coûts avec une erreur moyenne de 2 117$ par assuré.
 
