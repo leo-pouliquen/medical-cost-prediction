@@ -25,33 +25,33 @@ L'interprétabilité SHAP permet de valider la cohérence des prédictions et d'
 
 Le modèle retenu est XGBoost Optimisé — il explique 91.5% de la variance des coûts avec une erreur moyenne de 2 117$ par assuré.
 
-## 📁 Architecture du Projet
-
-Le code est modulaire :
-
-📂 medical_cost_prediction/
-├── 📄 main_notebook.ippy        # Script principal d'exécution et d'analyse
-├── 📄 config.py                 # Fichier de paramétrage : chemin et constantes du projet
-├── 📄 requirements.txt          # Dépendances du projet
+## 📁 Architecture du projet
+```
+medical_cost_prediction/
+├── config.py                    ← Chemins et constantes du projet
+├── requirements.txt             ← Dépendances Python
 │
-├── 📂 data/                      
-│    └── medicalcost.csv         # Dataset (1338 assurés, 7 variables)
+├── data/
+│   └── medicalcost.csv          ← Dataset (1 337 assurés, 7 variables)
 │
-├── 📂 src/                      
-│   ├── data_loader.py           # Chargement des données
-│   ├── data_quality.py          # Contrôles qualité (missing, outliers, doublons)
-│   ├── data_processing.py       # Encodage, split, pipeline
-│   ├── features_engineering.py  # Création de variables
-│   ├── eda.py                   # Visualisation et tests statistiques
-│   ├── models.py                # Entraînement et optimisation des modèles
-│   ├── evaluation.py            # Métriques d'évaluation et tableau comparatif
-│   └── interpretability.py      # Analyse SHAP
+├── notebooks/
+│   └── main_notebook.ipynb      ← Notebook principal (EDA + modélisation)
 │
-├── 📂 output/                  # Graphiques exportés
-│                  
-└── 📂 models/                      
-    └── xgboost_optimized.pkl    # Meilleur modèle sérialisé
-
+├── src/
+│   ├── data_loader.py           ← Chargement et validation des données
+│   ├── data_quality.py          ← Contrôles qualité (missing, outliers, doublons)
+│   ├── data_preprocessing.py    ← Encodage, split, pipeline sklearn
+│   ├── features_engineering.py  ← Création de variables actuarielles
+│   ├── eda.py                   ← Visualisations et tests statistiques
+│   ├── models.py                ← Entraînement et optimisation des modèles
+│   ├── evaluation.py            ← Métriques et tableau comparatif
+│   └── interpretability.py      ← Analyse SHAP
+│
+├── output/                      ← Graphiques exportés
+│
+└── models/
+    └── xgboost_optimized.pkl    ← Meilleur modèle sérialisé
+```
 
 ## Enseignements clés
 
